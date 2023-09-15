@@ -38,3 +38,69 @@ We imagined that pets should have data like their name, color, age. We also thou
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* What are Classes?
+-------------------
+In the previous exercise, we asked you to imagine a class for pets. Let’s see how we would actually create a PHP Pet class.
+
+To define a Pet class, we use the class keyword followed by the class name (typically title cased in PHP) and curly brackets:
+
+class Pet {
+
+}
+
+Within the curly brackets, we can add properties, which define the data each object of the class will contain. The syntax is similar to how we define variables:
+
+class Pet {
+  public $name, $color;
+}
+
+Note: The public keyword has to do with something called visibility. We’ll discuss this in depth later in the lesson.
+
+index.php
+---------
+<?php
+
+class Beverage {
+  public 
+    $color,
+    $opacity,
+    $temperature;
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Instantiating
+---------------
+In the previous exercise, we created a class (a blueprint) for any pet we may want to make. But we didn’t make any actual, individual pet objects. Since objects are specific instances of 
+a class, the process of creating them is called instantiation.
+
+In PHP, objects are instantiated using the new keyword followed by the class name and parentheses.
+
+$very_good_dog = new Pet();
+
+We now have our first object, $very_good_dog. We interact with an object’s properties using the object operator (->) followed by the name of the property (without the dollar sign, $).
+
+We can use this syntax to assign values to object properties:
+
+$very_good_dog->name = "Lassie";
+
+We can also use it to access the existing value of object properties:
+
+echo $very_good_dog->name; # Prints "Lassie"
+
+index.php
+---------
+<?php
+class Beverage {
+  public $temperature, $color, $opacity;
+}
+
+$tea = new Beverage();
+
+$tea->temperature = "hot";
+
+echo $tea->temperature;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
